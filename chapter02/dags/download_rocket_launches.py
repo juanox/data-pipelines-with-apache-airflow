@@ -45,7 +45,9 @@ def _get_pictures():
 
 
 get_pictures = PythonOperator(
-    task_id="get_pictures", python_callable=_get_pictures, dag=dag
+    task_id="get_pictures", 
+    python_callable=_get_pictures, 
+    dag=dag
 )
 
 notify = BashOperator(
